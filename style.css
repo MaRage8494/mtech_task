@@ -1,0 +1,166 @@
+/* Первоначальная настройка страницы */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif, "Times New Roman";
+}
+body {
+  background-color: #cbcbcb;
+}
+
+/* Прячем, чтобы позже назначить на кнопку данных функционал */
+.input {
+  display: none;
+}
+
+/* Настройка первого экрана */
+.screen {
+  height: 100vh;
+}
+.main-screen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-block {
+  display: flex;
+  width: 823px;
+  height: 367px;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #909090;
+  font-size: 24px;
+}
+
+/* Стилизация кнопки загрузки файла */
+.main-button {
+  margin-top: 108px;
+  width: 274px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #6346b4;
+  color: #ffffff;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Добавляем анимации при наведении, активности */
+.main-button:hover {
+  background-color: #a88ef0;
+}
+.main-button:active {
+  background-color: #311f63;
+}
+
+/* Настройка сообщения об ошибке */
+.error-message {
+  position: absolute;
+  top: 35px;
+  display: flex;
+  width: 720px;
+  height: 89px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #ff6565;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 15px #909090;
+}
+
+/* Данныq класс пригодиться для того, чтобы скрывать элементы */
+.hidden {
+  display: none;
+}
+
+/* Настройка второго экрана */
+#data-table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  position: relative;
+  top: 73px;
+  left: 33px;
+  width: 1407px;
+  height: 951px;
+  border-radius: 10px 0px 0px 0px;
+  background-color: #ffffff;
+}
+
+/* Стилизация таблицы */
+tr:not(:first-child) {
+  border-top: 1px solid #c0c0c0;
+}
+th:not(:last-child) {
+  border-right: 1px solid #c0c0c0;
+}
+
+tr {
+  font-size: 12px;
+  height: 44px;
+  
+}
+td {
+  text-align: left;
+  padding-left: 23px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+th {
+  font-weight: 400;
+  text-align: left;
+  padding-left: 23px;
+  text-align: left;
+  font-size: 14px;
+  height: 51px;
+  border-bottom: 2px solid #898989;
+}
+
+/* Добавление нижнего подчеркивания для столбца email */
+td:nth-child(3){
+    text-decoration: underline;
+}
+th:nth-child(1) {
+  width: 313px;
+}
+th:nth-child(2) {
+  width: 250px;
+}
+th:nth-child(3) {
+  width: 190px;
+}
+th:nth-child(4) {
+  width: 172px;
+}
+/* Добавление анимации при наведении на строку (кроме заголовков) */
+tr:hover:not(:first-child) {
+  background-color: #6346b440;
+}
+
+/* Стилизация кнопки для загрузки нового файла */
+#load-new-file {
+  position: absolute;
+  left: 1262px;
+  top: 18px;
+  z-index: 2;
+  width: 164px;
+  height: 36px;
+  border-radius: 5px;
+  background-color: #6346b4;
+  color: #ffffff;
+  border: 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+#load-new-file:hover {
+  background-color: #a88ef0;
+}
+#load-new-file:active {
+  background-color: #311f63;
+}

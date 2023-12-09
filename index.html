@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MTech|CSV Viewer</title>
+    <!-- Загрузка шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Подключение стилей CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Главный экран (загрузка) -->
+    <div id="main-screen" class="main-screen screen">
+      <div class="main-block">
+        <p class="main-text">Выберите файл в формате CSV</p>
+        <input type="file" id="file-input" class="input"/>
+        <button class="main-button">Загрузить</button>
+        <p id="error-message" class="error-message hidden"></p>
+      </div>
+    </div>
+
+    <!-- Просмотр данных (таблица) -->
+    <div id="data-screen" class="screen hidden">
+      <table id="data-table">
+        <!-- Здесь будет сгенерирована таблица -->
+      </table>
+      <button id="load-new-file">Загрузить новый файл</button>
+    </div>
+
+    <!-- Подключение скриптов JavaScript -->
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>
